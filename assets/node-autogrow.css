@@ -9,6 +9,8 @@
 .yui3-autogrow textarea {
     outline: 0;
     border: 0;
+    padding: 0;
+    margin: 0;
 }
 .yui3-autogrow > textarea,
 .yui3-autogrow > pre {
