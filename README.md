@@ -19,4 +19,4 @@ YUI().use("node-autogrow", function (Y) {
 <textarea>User input string...</textarea>
 ````
 
-[See Example](http://josephj.com/lab/2012/node-autogrow/samples/demo.html)
+[See Example](http://josephj.com/lab/2012/node-autogrow/sample/demo.html)
