@@ -13,14 +13,10 @@
 </head>
 <body>
     <h1>AutoGrow Prototype</h1>
-    <div class="yui3-autogrow">
-        <textarea id="foo">dfasdfasfasfasdfasdfasdfsadfasdfsadfsadf</textarea>
-    </div>
+    <textarea id="foo">dfasdfasfasfasdfasdfasdfsadfasdfsadfsadfdfasdfasfasfasdfasdfasdfsadfasdfsadfsadfdfasdfasfasfasdfasdfasdfsadfasdfsadfsadfdfasdfasfasfasdfasdfasdfsadfasdfsadfsadfdfasdfasfasfasdfasdfasdfsadfasdfsadfsadfdfasdfasfasfasdfasdfasdfsadfasdfsadfsadfdfasdfasfasfasdfasdfasdfsadfasdfsadfsadf</textarea>
     <script>
-    YUI().use("node-autogrow", function (Y) {
-        Y.one("#foo").plug(Y.AutoGrow, {
-            boundingBox: ".yui3-autogrow"
-        });
+    YUI().use("node-pluginhost", "node-autogrow", function (Y) {
+        Y.one("#foo").plug(Y.AutoGrow, {});
     });
     </script>
 
