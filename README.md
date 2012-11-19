@@ -4,7 +4,7 @@ AutoGrow Utility
 An utility that makes textarea expands in height to fit its contents.
 It is an YUI implementation of the article, [Expanding Text Areas Made Elegant](http://www.alistapart.com/articles/expanding-text-areas-made-elegant/) by Neil Jenkins.
 
-* Usage:
+Usage:
 
     <link rel="stylesheet" href="assets/node-autogrow.css">
     <script type="text/javascript" src="http://yui.yahooapis.com/3.7.3/build/yui/yui-min.js"></script>
@@ -22,4 +22,4 @@ It is an YUI implementation of the article, [Expanding Text Areas Made Elegant](
         <textarea>User input string...</textarea>
     </div>
 
-* [See Example](http://josephj.com/lab/2012/node-autogrow/demo.html)
+[See Example](http://josephj.com/lab/2012/node-autogrow/demo.html)
