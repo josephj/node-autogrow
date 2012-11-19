@@ -6,15 +6,17 @@ It is an YUI implementation of the article, [Expanding Text Areas Made Elegant](
 
 Usage:
 
-    <link rel="stylesheet" href="assets/node-autogrow.css">
-    <script type="text/javascript" src="http://yui.yahooapis.com/3.7.3/build/yui/yui-min.js"></script>
-    <script type="text/javascript" src="node-autogrow.js"></script>
-    <script>
-    YUI().use("node-autogrow", function (Y) {
-        Y.one("textarea").plug(Y.AutoGrow);
-    });
-    </script>
+````html
+<link rel="stylesheet" href="assets/node-autogrow.css">
+<script type="text/javascript" src="http://yui.yahooapis.com/3.7.3/build/yui/yui-min.js"></script>
+<script type="text/javascript" src="node-autogrow.js"></script>
+<script>
+YUI().use("node-autogrow", function (Y) {
+    Y.one("textarea").plug(Y.AutoGrow);
+});
+</script>
 
-    <textarea>User input string...</textarea>
+<textarea>User input string...</textarea>
+````
 
 [See Example](http://josephj.com/lab/2012/node-autogrow/demo.html)
