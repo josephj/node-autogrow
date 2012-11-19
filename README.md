@@ -11,15 +11,10 @@ Usage:
     <script type="text/javascript" src="node-autogrow.js"></script>
     <script>
     YUI().use("node-autogrow", function (Y) {
-        Y.one("textarea").plug(Y.AutoGrow, {
-            boundingBox: "#foo",
-            width: 500
-        });
+        Y.one("textarea").plug(Y.AutoGrow);
     });
     </script>
 
-    <div id="foo">
-        <textarea>User input string...</textarea>
-    </div>
+    <textarea>User input string...</textarea>
 
 [See Example](http://josephj.com/lab/2012/node-autogrow/demo.html)
