@@ -2,23 +2,39 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="author" content="josephj">
-<meta name="created" content="2012-11-16">
 <title>AutoGrow Prototype</title>
-<link rel="stylesheet" href="http://yui.yahooapis.com/3.7.3/build/cssreset/reset-min.css">
-<link rel="stylesheet" href="http://yui.yahooapis.com/3.7.3/build/cssfonts/fonts-min.css">
+<link rel="stylesheet" href="normalize.css">
 <link rel="stylesheet" href="../assets/node-autogrow.css">
+<style>
+.hint {
+    color: red;
+    visibility: hidden;
+    font-size: 11px;
+}
+</style>
 <script type="text/javascript" src="http://yui.yahooapis.com/3.7.3/build/yui/yui-min.js"></script>
 <script type="text/javascript" src="../node-autogrow.js"></script>
+<script>
+YUI().use("node-pluginhost", "node-autogrow", function (Y) {
+    Y.one("button").on("click", function () {
+        Y.one("textarea").plug(Y.AutoGrow, {width: 400});
+        Y.one(".hint").setStyle("visibility", "visible");
+    });
+});
+</script>
 </head>
 <body>
     <h1>AutoGrow Prototype</h1>
-    <textarea id="foo">dfasdfasfasfasdfasdfasdfsadfasdfsadfsadfdfasdfasfasfasdfasdfasdfsadfasdfsadfsadfdfasdfasfasfasdfasdfasdfsadfasdfsadfsadfdfasdfasfasfasdfasdfasdfsadfasdfsadfsadfdfasdfasfasfasdfasdfasdfsadfasdfsadfsadfdfasdfasfasfasdfasdfasdfsadfasdfsadfsadfdfasdfasfasfasdfasdfasdfsadfasdfsadfsadf</textarea>
-    <script>
-    YUI().use("node-pluginhost", "node-autogrow", function (Y) {
-        Y.one("#foo").plug(Y.AutoGrow, {});
-    });
-    </script>
+    <p>
+        <code>Y.one(&lt;CSS Selector&gt;).plug(Y.AutoGrow);</code>
+    </p>
+    <p>
+        <button>Add node-autogrow plugin to the following textarea</button>
+    </p>
+    <textarea>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut accumsan tincidunt velit feugiat pretium. Sed consectetur elit volutpat neque consequat dignissim. Donec ornare, purus sed venenatis volutpat, magna tellus suscipit diam, vitae ultrices diam urna tristique massa. Praesent quis justo mi, quis rhoncus erat. Vivamus varius orci nibh, quis consequat odio. Phasellus eu velit nec turpis placerat dapibus. Etiam volutpat facilisis sem, placerat ullamcorper lectus posuere eu. Duis faucibus, orci vitae consequat pulvinar, diam urna mollis nisi, at commodo ipsum arcu non magna. Cras id velit et nisl faucibus vulputate vitae ut sapien. Praesent non adipiscing lectus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam vitae venenatis massa.
+    Nulla eget libero est. Nulla eget mollis odio. Pellentesque quis mi eu turpis placerat gravida. Etiam ut ullamcorper urna. Aenean consectetur gravida nunc, in convallis sapien molestie at. Cras massa nulla, eleifend eget ultrices sit amet, pellentesque volutpat odio. Praesent pellentesque ultricies est at tincidunt.</textarea>
+    <p class="hint">Type some words to change the height of textarea.</p>
+
 
 </body>
 </html>
