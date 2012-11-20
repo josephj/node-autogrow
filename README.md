@@ -2,7 +2,7 @@ AutoGrow Utility
 ================
 
 An utility that makes textarea expands in height to fit its contents.<br>
-It is an YUI implementation of an article, [Expanding Text Areas Made Elegant](http://www.alistapart.com/articles/expanding-text-areas-made-elegant/) by Neil Jenkins.
+It is an YUI implementation of an idea, [Expanding Text Areas Made Elegant](http://www.alistapart.com/articles/expanding-text-areas-made-elegant/) by Neil Jenkins.
 
 Usage:
 
