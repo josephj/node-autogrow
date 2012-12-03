@@ -79,7 +79,6 @@ YUI.add("node-autogrow", function (Y) {
         AutoGrow.superclass.constructor.apply(this, arguments);
     }
 
-    AutoGrow.DEFAULT_WIDTH = 150,
     AutoGrow.MIRROR_HTML   = "<pre><span></span><br></pre>";
     AutoGrow.NAME  = "autogrow"; // To identify the class.
     AutoGrow.NS    = "AutoGrow"; // To identify the namespace.
@@ -119,24 +118,26 @@ YUI.add("node-autogrow", function (Y) {
 
             if (config.width && parseInt(config.width, 10)) {
                 width = parseInt(config.width, 10);
-            } else {
-                width = AutoGrow.DEFAULT_WIDTH;
+                boundingBox.setStyle("width", width + "px");
             }
-            boundingBox.setStyle("width", width + "px");
 
             // Set the mirror <pre/> element.
-            if (boundingBox.getHTML().indexOf(html) === -1) {
+            if (!boundingBox.one("pre span")) {
                 boundingBox.insert(html, textNode);
             }
             mirrorNode = boundingBox.one("span");
 
-            // Bind event.
-            textNode.on("valuechange", function (e) {
-                mirrorNode.setHTML(this.get("value"));
-            })
+            // Set class
+            boundingBox.addClass(_getClassName());
 
             // Initalize the value.
             mirrorNode.setHTML(textNode.getHTML());
+
+            // Bind event.
+            textNode.on("valuechange", function (e) {
+                mirrorNode.set("text", this.get("value"));
+            })
+
         }
     });
 
